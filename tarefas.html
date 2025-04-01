@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas - SOS Cidade & Causa</title>
+    <link rel="stylesheet" href="tarefas.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SOS Cidade & Causa</h1>
+        </div>
+        <nav>
+            <a href="index.html">Página Principal</a>
+            <a href="notificacoes.html">Notificações</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="admin.html">Admin</a>
+            <a href="javascript:void(0)" onclick="logout()">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tasks-section">
+            <h2>Tarefas Pendentes</h2>
+            
+            <!-- Botão para cadastrar nova tarefa -->
+            <button class="btn-cadastrar" onclick="window.location.href='tarefa.html'">Cadastrar Nova Tarefa</button>
+
+            <div class="tasks-list">
+                <div class="task">
+                    <h3>Problema na Rua X</h3>
+                    <p>Descrição do problema na rua X, com detalhes sobre a situação...</p>
+                    <button class="btn">Acompanhar</button>
+                </div>
+                <div class="task">
+                    <h3>Alagamento na Praça Y</h3>
+                    <p>Alagamento frequente na Praça Y durante períodos de chuva...</p>
+                    <button class="btn">Acompanhar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SOS Cidade & Causa</p>
+    </footer>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('usuario');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

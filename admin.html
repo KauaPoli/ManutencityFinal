@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - SOS Cidade & Causa</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SOS Cidade & Causa</h1>
+        </div>
+        <nav>
+            <a href="index.html">Página Principal</a>
+            <a href="tarefas.html">Tarefas</a>
+            <a href="notificacoes.html">Notificações</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="javascript:void(0)" onclick="logout()">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="admin-section">
+            <h2>Área Administrativa</h2>
+            <div class="admin-task">
+                <h3>Gerenciar Usuários</h3>
+                <button class="btn">Ver Usuários</button>
+            </div>
+            <div class="admin-task">
+                <h3>Gerenciar Tarefas</h3>
+                <button class="btn">Ver Tarefas</button>
+            </div>
+            <div class="admin-task">
+                <h3>Gerar Relatórios</h3>
+                <button class="btn">Ver Relatórios</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SOS Cidade & Causa</p>
+    </footer>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('usuario');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

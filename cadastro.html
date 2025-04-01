@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - SOS Cidade & Causa</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Cadastro</h2>
+            <form id="cadastroForm">
+                <input type="text" id="nome" placeholder="Nome Completo" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="senha" placeholder="Senha" required>
+                <button type="submit" class="btn">Cadastrar</button>
+            </form>
+            <p>Já tem conta? <a href="login.html">Faça login</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+            
+            // Salva as credenciais no localStorage
+            localStorage.setItem('usuario', JSON.stringify({ nome, email, senha }));
+            
+            // Redireciona para o login após cadastro
+            alert('Cadastro realizado com sucesso! Agora você pode fazer login.');
+            window.location.href = 'login.html';  // Redireciona para o login
+        });
+    </script>
+</body>
+</html>

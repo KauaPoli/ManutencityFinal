@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao SOS Cidade & Causa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SOS Cidade & Causa</h1>
+        </div>
+        <nav>
+            <a href="tarefas.html">Tarefas</a>
+            <a href="notificacoes.html">Notificações</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="admin.html">Admin</a>
+            <a href="javascript:void(0)" onclick="logout()">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>
+                <img src="imagem.logo.PNG" alt="Logo" class="logo-transforme"> 
+                Transforme a sua cidade
+            </h2>
+            <p>Relate problemas urbanos e ajude a melhorar a sua cidade.</p>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h3>Relatar Problemas</h3>
+                <p>Comunique falhas na infraestrutura da cidade e acompanhe sua resolução.</p>
+            </div>
+            <div class="feature">
+                <h3>Melhorias Propostas</h3>
+                <p>Encoraje melhorias em sua comunidade com sugestões construtivas.</p>
+            </div>
+            <div class="feature">
+                <h3>Acompanhamento</h3>
+                <p>Fique por dentro do progresso das demandas da cidade.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SOS Cidade & Causa</p>
+    </footer>
+
+    <script>
+        if (!localStorage.getItem('usuario')) {
+            window.location.href = 'login.html';  // Redireciona para o login se não estiver logado
+        }
+
+        function logout() {
+            localStorage.removeItem('usuario');
+            window.location.href = 'login.html';  // Redireciona para a página de login após logout
+        }
+    </script>
+</body>
+</html>

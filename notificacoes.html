@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações - SOS Cidade & Causa</title>
+    <link rel="stylesheet" href="notificacoes.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SOS Cidade & Causa</h1>
+        </div>
+        <nav>
+            <a href="index.html">Página Principal</a>
+            <a href="tarefas.html">Tarefas</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="admin.html">Admin</a>
+            <a href="javascript:void(0)" onclick="logout()">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="notifications-section">
+            <h2>Notificações Recentes</h2>
+            <div class="notification">
+                <h3>Problema Resolvido - Rua X</h3>
+                <p>A situação na Rua X foi resolvida, e o problema foi corrigido.</p>
+                <span>3 horas atrás</span>
+            </div>
+            <div class="notification">
+                <h3>Nova Tarefa Criada</h3>
+                <p>Uma nova tarefa foi criada para a Praça Y. Acompanhe o progresso.</p>
+                <span>5 horas atrás</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SOS Cidade & Causa</p>
+    </footer>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('usuario');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

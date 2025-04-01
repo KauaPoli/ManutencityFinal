@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SOS Cidade & Causa</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="senha" placeholder="Senha" required>
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+            <p>Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+        </div>
+    </div>
+
+    <script>
+        if (localStorage.getItem('usuario')) {
+            window.location.href = 'index.html';  // Redireciona para a página principal
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            const usuario = JSON.parse(localStorage.getItem('usuario'));
+
+            if (usuario && usuario.email === email && usuario.senha === senha) {
+                alert('Login realizado com sucesso!');
+                window.location.href = 'index.html';  // Redireciona para a página principal
+            } else {
+                alert('Credenciais inválidas. Tente novamente.');
+            }
+        });
+    </script>
+</body>
+</html>
